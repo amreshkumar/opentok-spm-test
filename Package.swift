@@ -6,27 +6,19 @@ import PackageDescription
 let package = Package(
     name: "ios-spm-opentok",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v10)
     ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "OpenTok",
-            targets: ["ios-spm-opentok"]),
+            targets: ["OpenTok"]),
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-    ],
+    dependencies: [],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "OpenTok"
-         ),
         .binaryTarget(
-            name: "OpenTok Artifactory XCFramework",
-            url: "",
-            checksum: "a6da1f7c705694ccd1743be6963bb9e3"
+            name: "OpenTok",
+            url: "https://github.com/amreshkumar/opentok-spm-test/releases/download/0.1/OpenTok.xcframework.zip",
+            checksum: "ec6e6f32c1a6ffc95decb03dedb1bd0bb63f04b26229ef3016f9c92cb0ab7079"
         ),
     ]
 )
